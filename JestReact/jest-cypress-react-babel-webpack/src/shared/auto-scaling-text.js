@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './auto-scaling-text.module.css'
 
 function getScale(node) {
+  console.log(styles);
   if (!node) {
     return 1
   }
@@ -32,6 +33,7 @@ function AutoScalingText({children}) {
     </div>
   )
 }
+
 AutoScalingText.propTypes = {
   children: PropTypes.node,
 }
