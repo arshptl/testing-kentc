@@ -4,9 +4,12 @@ import styles from './auto-scaling-text.module.css'
 
 function getScale(node) {
   console.log(styles);
+  // console.log(node);
+  debugger
   if (!node) {
     return 1
   }
+  
   const parentNode = node.parentNode
 
   const availableWidth = parentNode.offsetWidth
