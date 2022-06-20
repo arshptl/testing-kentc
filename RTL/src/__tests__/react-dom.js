@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom'
-import * as React from 'react'
+import React from 'react'
+// import '@testing-library/jest-dom'
 // import ReactDOM from 'react-dom'
 // import { getQueriesForElement } from '@testing-library/dom'
 import { render } from '@testing-library/react'
@@ -17,7 +17,8 @@ import { FavoriteNumber } from '../favorite-number'
 // }
 
 test('renders a number input with a label "Favorite Number"', () => {
-  const { getByLabelText } = render(<FavoriteNumber />);
+  const { getByLabelText, debug } = render(<FavoriteNumber />);
+  debug()
   const input = getByLabelText(/Favorite Number/i);
   expect(input).toHaveAttribute('type', 'number')
 })
