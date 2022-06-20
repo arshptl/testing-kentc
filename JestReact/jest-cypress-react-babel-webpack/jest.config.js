@@ -9,5 +9,20 @@ module.exports = {
     },
     snapshotSerializers: [
         '@emotion/jest/serializer'
-    ]
+    ],
+    collectCoverageFrom: ['**/src/**/*.js'],
+    coverageThreshold: {
+        global: {
+            statements: 34,
+            branches: 24,
+            functions: 29,
+            lines: 29,
+        },
+        './src/shared/utils.js': {
+            statements: 100,
+            branches: 80,
+            functions: 100,
+            lines: 100,
+        }
+    }
 }
