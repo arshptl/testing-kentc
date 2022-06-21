@@ -1,5 +1,4 @@
-import * as React from 'react'
-
+import React from "react"
 function Editor() {
   return (
     <form>
@@ -13,8 +12,9 @@ function Editor() {
       <input id="tags-input" />
 
       <button type="submit">Submit</button>
+
     </form>
   )
 }
 
-export {Editor}
+export { Editor }

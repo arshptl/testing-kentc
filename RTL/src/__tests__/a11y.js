@@ -31,6 +31,9 @@ test('inaccessible forms fail axe', async () => {
 })
 
 test('accessible forms pass axe', async () => {
-  const {container} = render(<AccessibleForm />)
-  expect(await axe(container)).toHaveNoViolations()
+  const { container } = render(<AccessibleForm />)
+  // console.log(container);
+  // expect(await axe(container)).toHaveNoViolations()
+    expect(await axe(container)).toHaveNoViolations()
+
 })

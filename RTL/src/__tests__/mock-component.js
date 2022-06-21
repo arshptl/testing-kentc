@@ -3,6 +3,7 @@ import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {HiddenMessage} from '../hidden-message'
 
+// Mock the css transition, which will forward the (animation)transition
 jest.mock('react-transition-group', () => {
   return {
     CSSTransition: (props) => (props.in ? props.children : null),
@@ -19,3 +20,4 @@ test('shows hidden message when toggle is clicked', () => {
   userEvent.click(toggleButton)
   expect(screen.queryByText(myMessage)).not.toBeInTheDocument()
 })
+

@@ -6,6 +6,9 @@ import {rest} from 'msw'
 import {setupServer} from 'msw/node'
 import {GreetingLoader} from '../greeting-loader-01-mocking'
 
+
+// Creates the local server, which will handle the requests
+// MSW
 const server = setupServer(
   rest.post('/greeting', (req, res, ctx) => {
     return res(ctx.json({data: {greeting: `Hello ${req.body.subject}`}}))
@@ -25,4 +28,4 @@ test('loads greetings on click', async () => {
   await waitFor(() =>
     expect(screen.getByLabelText(/greeting/i)).toHaveTextContent('Hello Mary'),
   )
-})
+}) 
