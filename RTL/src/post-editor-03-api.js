@@ -3,6 +3,7 @@ import {savePost} from './api'
 
 function Editor({user}) {
   const [isSaving, setIsSaving] = React.useState(false)
+
   function handleSubmit(e) {
     e.preventDefault()
     const {title, content, tags} = e.target.elements
@@ -15,6 +16,7 @@ function Editor({user}) {
     setIsSaving(true)
     savePost(newPost)
   }
+  
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="title-input">Title</label>
