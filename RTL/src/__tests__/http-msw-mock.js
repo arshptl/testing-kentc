@@ -8,7 +8,7 @@ import {GreetingLoader} from '../greeting-loader-01-mocking'
 
 
 // Creates the local server, which will handle the requests
-// MSW
+// MSW-MSW
 const server = setupServer(
   rest.post('/greeting', (req, res, ctx) => {
     return res(ctx.json({data: {greeting: `Hello ${req.body.subject}`}}))
